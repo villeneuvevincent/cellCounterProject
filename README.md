@@ -45,6 +45,7 @@ $$
 
 The threshold calculated is the value of s for which the inter-class variance of $sigma_b^2(s)$ is at its maximum.
 
+### Counting related components per depth run
 
 
 
