@@ -47,7 +47,48 @@ The threshold calculated is the value of s for which the inter-class variance of
 
 ### Counting related components per depth run
 
+Two pixels belong to the same connected component if they are in contact on one of their four sides: we therefore consider 4-connectivity. To count related components, we use a recursive depth-first algorithm (DFS) on the image's white pixels. Once this algorithm has been implemented, we'll count the related components by performing a search using all the pixels in the image.
 
+'''python
+void dfs(IMAGE im, IMAGE visite, int l, int c){
+  if (visite.pixels[l][c] == 0) {
+    if (im.pixels[l][c] == 255) {
+      visite.pixels[l][c] = 1;
+      dfs(im, visite, l-1, c);
+      dfs(im, visite, l+1, c);
+      dfs(im, visite, l, c-1);
+      dfs(im, visite, l, c+1);
+    }
+  }
+}
+'''
 
+Care must be taken not to visit pixels that have already been visited. Each new successful search will correspond to a new related component.
+
+'''python
+int comptage(IMAGE im){
+  IMAGE visite;
+  visite = copie(im);
+  int i, j;
+  for (j= 0; j < im.lignes*im.colonnes; j++) {
+    visite.pixels[0][j] = 0;
+  }
+
+  int count = 0;
+  for (i = 1; i < im.lignes-1; i++) {
+    for (j = 1; j < im.colonnes-1; j++) {
+      if(visite.pixels[i][j] == 0){
+        if (im.pixels[i][j] == 255) {
+          count += 1;
+        }
+        dfs(im,visite, i,j);
+      }
+    }
+  }
+
+  libre(visite);
+  return count;
+}
+'''
 
 
