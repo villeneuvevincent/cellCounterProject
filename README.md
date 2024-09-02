@@ -8,7 +8,7 @@ To count the cells, I have considered that two pixels belong to the same connect
 For this project, I program in C and use Valgrind to carry out memory tests and analysis, with a view to detecting
 performance problems or program instability.
 
-![Image et son histogramme](./images/img-readme/Capture d’écran 2024-09-02 à 11.36.21.png)
+![Image et son histogramme](./images/img-readme/otsu.png)
 
 **Figure 5 – L’image et son histogramme.**
 
