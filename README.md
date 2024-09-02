@@ -1,3 +1,5 @@
+![Image et son histogramme](./image/img-readme/1.png) ![Image et son histogramme](./image/img-readme/2.png) ![Image et son histogramme](./image/img-readme/3.png)
+
 # Cell Counter Project
 
 The codes provided allow you to process a pgm scanner image in order to count the number of cells present on it.
