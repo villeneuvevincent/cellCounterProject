@@ -1,4 +1,8 @@
-![Image et son histogramme](./image/img-readme/1.png) ![Image et son histogramme](./image/img-readme/2.png) ![Image et son histogramme](./image/img-readme/3.png)
+<p align="center">
+  <img src="./image/img-readme/1.png" alt="Image 1" width="200"/>
+  <img src="./image/img-readme/2.png" alt="Image 2" width="200"/>
+  <img src="./image/img-readme/3.png" alt="Image 3" width="200"/>
+</p>
 
 # Cell Counter Project
 
