@@ -1,10 +1,15 @@
 # Cell Counter Project
 
-The codes provided allow you to process a pgm scanner image in order to count the number of cells present on it.\
-The data structures used are contiguously allocated arrays. This allows me, when reading or writing a file, to work with all the data at once, treating it as a single binary block. \
-For thresholding, I used the Otsu method. It allows me to automatically determine the threshold value from the image histogram, the one that maximizes the inter-class variance.\
-I'm also going to apply basic morphological operations (Erosion, Dilatation, Reconstruction) to remove cells from the edge of my image considered spurious, plug holes in my cells, erode the image to separate cells in contact.\
-To count cells, I've considered that two pixels belong to the same connected component if they are in contact on one of their four sides.\
+The codes provided allow you to process a pgm scanner image in order to count the number of cells present on it.
+
+The data structures used are contiguously allocated arrays. This allows me, when reading or writing a file, to work with all the data at once, treating it as a single binary block. 
+
+For thresholding, I used the Otsu method. It allows me to automatically determine the threshold value from the image histogram, the one that maximizes the inter-class variance.
+
+I'm also going to apply basic morphological operations (Erosion, Dilatation, Reconstruction) to remove cells from the edge of my image considered spurious, plug holes in my cells, erode the image to separate cells in contact.
+
+To count cells, I've considered that two pixels belong to the same connected component if they are in contact on one of their four sides.
+
 For this project, I'm programming in C and using Valgrind to perform tests and memory analysis, with a view to detecting performance problems or program instability.
 program performance or instability problems.\
 
