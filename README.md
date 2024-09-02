@@ -12,9 +12,9 @@ performance problems or program instability.
 
 ![Image et son histogramme](./image/img-readme/otsu.png)
 
-**Figure 5 – L’image et son histogramme.**
+**Figure 1 – The image and its histogram.**
 
-La méthode d’Otsu énumère toutes les valeurs possibles du seuil, de 0 à 255, et trouve celle qui maximise la variance inter-classe, c’est-à-dire celle qui sépare le mieux les deux modes. La variance inter-classe \( \sigma_b^2(s) \) est définie dans l’équation (1).
+The Otsu method lists all possible threshold values, from 0 to 255, and finds the one that maximizes the inter-class variance, i.e. the one that best separates the two modes. The inter-class variance \( \sigma_{b}^{2}(s) \) is defined in equation (1).
 
 $$
 \sigma_b^2(s) = \omega_0(s)\omega_1(s)[\mu_0(s) - \mu_1(s)]^2 \tag{1}
